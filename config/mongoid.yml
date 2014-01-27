@@ -6,11 +6,6 @@ development:
                 - localhost:27017
             options:
     options:
-production:
-    sessions:
-        default:
-            uri: <%= ENV['MONGOHQ_URL'] %>
-            options:
-                consistency: :strong
-                max_retries: 1
-                retry_interval: 0 
+production: 
+    uri: "mongodb://wlglobalcorpheroku:2edca4bf6f2b6626ea706233b1a2f670@troup.mongohq.com:10050/app21654507"
+
