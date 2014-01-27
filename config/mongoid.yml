@@ -1,16 +1,16 @@
 development:
-  sessions:
-    default:
-      database: wlglobal_development
-      hosts:
-        - localhost:27017
-      options:
-  options:
+    sessions:
+        default:
+            database: project_manager_development
+            hosts:
+                - localhost:27017
+            options:
+    options:
 production:
-  sessions:
-    default:
-      uri: <%= ENV['MONGOHQ_URL'] %>
-      options:
-        consistency: :strong
-        max_retries: 1
-        retry_interval: 0
+sessions:
+default:
+uri: <%= ENV['MONGOHQ_URL'] %>
+options:
+consistency: :strong
+max_retries: 1
+retry_interval: 0 
