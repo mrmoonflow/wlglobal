@@ -1,3 +1,3 @@
-class Project
+class Customer
   include Mongoid::Document
 end

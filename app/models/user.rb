@@ -1,3 +1,3 @@
-class Project
+class User
   include Mongoid::Document
 end
