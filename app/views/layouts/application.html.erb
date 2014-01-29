@@ -14,6 +14,8 @@
   <%=link_to "My Homepage", user_path(current_user)%> |
   <%=link_to "Project List", "/projects"%> |
   <%=link_to "Customer List", "/customers"%> |
+  <%=link_to "Create New Project", "/projects/new"%> |
+  <%=link_to "Create New Customer", "/customers/new"%> |
   <%=link_to "Edit my profile", edit_user_path(current_user)%> |
   <%=link_to "Log out", destroy_user_session_path,:method => :delete %>
   <%end%>

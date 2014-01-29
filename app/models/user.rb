@@ -33,4 +33,5 @@ class User
     #user's project infomation
     field :customer_list, :type => []
     
+    validates :name, :presence =>true
 end

@@ -69,7 +69,12 @@ class CustomersController < ApplicationController
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
+    #def customer_params
+    #  params[:customer]
+    #end
+    
+    private
     def customer_params
-      params[:customer]
+        params.require(:customer).permit(:name, :address, :customer_id, :phone, :company, :wechat, :sex, :status, :project)
     end
 end

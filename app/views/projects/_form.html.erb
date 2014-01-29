@@ -1,4 +1,12 @@
 <%= form_for(@project) do |f| %>
+
+
+Project Name: <br>
+<%= f.text_field :name, :id => "name" %><br>
+Project Location: <br>
+<%= f.text_field :location, :id => "location" -%>
+<br>
+<br>
   <% if @project.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@project.errors.count, "error") %> prohibited this project from being saved:</h2>
