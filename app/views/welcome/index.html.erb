@@ -1,1 +1,6 @@
-Welcome!!
+<h2>Welcome!</h2>
+
+<br/>
+<%if !user_signed_in?%>
+<h2><%=link_to "Sign in", new_user_session_path%></h2>
+<%end%>

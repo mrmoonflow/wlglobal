@@ -5,6 +5,19 @@
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+  <div align = "center">
+  <%=link_to (image_tag "static.squarespace.com.jpg"), "/welcome/index"%>
+  </div>
+  <br>
+  <div align = "left">
+  <%if  user_signed_in?%>
+  <%=link_to "My Homepage", user_path(current_user)%> |
+  <%=link_to "Project List", "/projects"%> |
+  <%=link_to "Customer List", "/customers"%> |
+  <%=link_to "Edit my profile", edit_user_path(current_user)%> |
+  <%=link_to "Log out", destroy_user_session_path,:method => :delete %>
+  <%end%>
+  </div>
 </head>
 <body>
 <p class="notice"><%= notice %></p>
