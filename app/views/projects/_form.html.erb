@@ -4,7 +4,7 @@
 Project Name: <br>
 <%= f.text_field :name, :id => "name" %><br>
 Project Location: <br>
-<%= f.text_field :location, :id => "location" -%>
+<%= f.select :location, [['NY','NY'],['FL','FL'],['NJ','NJ'],['CA','CA'],['WS','WS']] %>
 <br>
 <br>
   <% if @project.errors.any? %>
