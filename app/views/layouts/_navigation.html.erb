@@ -2,8 +2,11 @@
 <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
+    <div align = "center">
+  <%=link_to (image_tag "static.squarespace.com.jpg"), "/welcome/index"%>
+  </div>
     
-      <div align = "left">
+      <div align = "center">
   <%if  user_signed_in?%>
   <%=link_to "My Homepage", user_path(current_user)%> |
   <%=link_to "Project List", "/projects"%> |
