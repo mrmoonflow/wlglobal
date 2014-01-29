@@ -3,6 +3,12 @@
 <table>
   <thead>
     <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Status</th>
+        <th>Project</th>
+        <th>Wechat ID</th>
+        <th>Phone</th>
       <th></th>
       <th></th>
       <th></th>
@@ -12,6 +18,12 @@
   <tbody>
     <% @customers.each do |customer| %>
       <tr>
+        <td><%=customer.customer_id%></td>
+        <td><%=customer.name%></td>
+        <td><%=customer.status%></td>
+        <td><%=customer.project%></td>
+        <td><%=customer.wechat%></td>
+        <td><%=customer.phone%></td>
         <td><%= link_to 'Show', customer %></td>
         <td><%= link_to 'Edit', edit_customer_path(customer) %></td>
         <td><%= link_to 'Destroy', customer, method: :delete, data: { confirm: 'Are you sure?' } %></td>

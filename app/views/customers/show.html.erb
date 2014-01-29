@@ -1,4 +1,15 @@
 <p id="notice"><%= notice %></p>
 
+<h1>Customer Profile:</h1>
+
+Name: <%=@customer.name%><br>
+ID: <%=@customer.customer_id%><br>
+Phone: <%=@customer.phone%><br>
+Address: <%=@customer.address%><br>
+WeChat ID: <%=@customer.wechat%><br>
+Project: <%=@customer.project%><br>
+Status: <%=@customer.status%><br>
+
+
 <%= link_to 'Edit', edit_customer_path(@customer) %> |
 <%= link_to 'Back', customers_path %>
