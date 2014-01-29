@@ -1,0 +1,25 @@
+<%# navigation styled for Bootstrap 3.0 %>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+    
+      <div align = "left">
+  <%if  user_signed_in?%>
+  <%=link_to "My Homepage", user_path(current_user)%> |
+  <%=link_to "Project List", "/projects"%> |
+  <%=link_to "Customer List", "/customers"%> |
+  <%=link_to "Create New Project", "/projects/new"%> |
+  <%=link_to "Create New Customer", "/customers/new"%> |
+  <%=link_to "Edit my profile", edit_user_path(current_user)%> |
+  <%=link_to "Log out", destroy_user_session_path,:method => :delete %>
+  <%end%>
+  
+  </div>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <%= render 'layouts/navigation_links' %>
+      </ul>
+    </div>
+  </div>
+</nav>

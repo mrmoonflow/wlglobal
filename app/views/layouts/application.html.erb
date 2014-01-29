@@ -1,30 +1,20 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Wlglobal</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
-  <div align = "center">
-  <%=link_to (image_tag "static.squarespace.com.jpg"), "/welcome/index"%>
-  </div>
-  <br>
-  <div align = "left">
-  <%if  user_signed_in?%>
-  <%=link_to "My Homepage", user_path(current_user)%> |
-  <%=link_to "Project List", "/projects"%> |
-  <%=link_to "Customer List", "/customers"%> |
-  <%=link_to "Create New Project", "/projects/new"%> |
-  <%=link_to "Create New Customer", "/customers/new"%> |
-  <%=link_to "Edit my profile", edit_user_path(current_user)%> |
-  <%=link_to "Log out", destroy_user_session_path,:method => :delete %>
-  <%end%>
-  </div>
-</head>
-<body>
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
-<%= yield %>
-
-</body>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= content_for?(:title) ? yield(:title) : "Wlglobal" %></title>
+    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Wlglobal" %>">
+    <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <header>
+      <%= render 'layouts/navigation' %>
+    </header>
+    <main role="main">
+       <%= render 'layouts/messages' %>
+       <%= yield %>
+    </main>
+  </body>
 </html>
