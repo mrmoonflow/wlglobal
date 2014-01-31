@@ -19,6 +19,7 @@
             <li><%=link_to "Create New Project", "/projects/new"%> </li>
             <li><%=link_to "Create New Customer", "/customers/new"%> </li>
             <li><%=link_to "Edit my profile", edit_user_path(current_user)%> </li>
+            <li><%=link_to "Design Page", "/welcome/design"%> </li>
             <li><%=link_to "Log out", destroy_user_session_path,:method => :delete %></li>
         <%end%>
           

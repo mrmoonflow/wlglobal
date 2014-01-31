@@ -11,5 +11,6 @@ Wlglobal::Application.routes.draw do
 
 
     get "welcome/index"
+    get "welcome/design"
     
 end
