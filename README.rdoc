@@ -16,6 +16,9 @@ Bootstrap
 
 Deployed on heroku with MongoHQ.
 
+Trying to use Rspec and Cucumber for BDD.
+Still learning :)
+
 You can contact: ericdeng11@gmail.com
 
 Thanks!
