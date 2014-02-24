@@ -22,7 +22,9 @@
       	
       <!-- column 2 -->	
             <a href="#"><strong><i class="glyphicon glyphicon-dashboard"></i> Projects</strong></a> 
-    <hr>  
+            <br>
+<div align="left"><span class="glyphicon glyphicon-plus-sign"></span> <%= link_to 'Add New Project', new_project_path %></div>
+    <br>
     <table class="table table-condensed">
   <thead>
     <tr>
@@ -39,9 +41,9 @@
       <tr>
         <td><%=project.name%></td>
         <td><%=project.location%></td>
-        <td><%= link_to 'Show', project %></td>
-        <td><%= link_to 'Edit', edit_project_path(project) %></td>
-        <td><%= link_to 'Delete', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', project %> |
+        <%= link_to 'Edit', edit_project_path(project) %> |
+        <%= link_to 'Delete', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -54,7 +56,6 @@
 </div>
 </div>
 <!-- /Main -->
-<div align="center"><%= link_to 'New Project', new_project_path %></div>
 
         
         <script type='text/javascript' src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
