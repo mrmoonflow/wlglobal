@@ -9,7 +9,7 @@ Wechat ID: <%= f.text_field :wechat, :id => "wechat" %><br><br>
 
 Project: <%= f.text_field :project, :id => "project" %><br><br>
 Client Status: 
-<%= f.select :status, [['I-526 Application','I-526 Application'],['I-526 Approval','I-526 Approval'],['Interview','Interview'],['Conditional Green Card','Conditional Green Card'],['I-829 Application','I-829 Application'],['Permanent Green Card','Permanent Green Card']] %><br><br>
+<%= f.select :status, [['I-526 Application','I-526 Application'],['I-526 Approval','I-526 Approval'],['Interview','Interview'],['Conditional Green Card','Conditional Green Card'],['I-829 Application','I-829 Application'],['Permanent Green Card','Permanent Green Card'],['Potential Client','Potential Client']] %><br><br>
   <% if @customer.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@customer.errors.count, "error") %> prohibited this customer from being saved:</h2>
