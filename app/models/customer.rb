@@ -10,5 +10,17 @@ class Customer
     field :status, :type => String, :default => ""
     field :project, :type => String, :default => ""
     
+    #Other people in the family
+    field :name1, :type => String, :default => ""
+    field :name2, :type => String, :default => ""
+    field :wechat1, :type => String, :default => ""
+    field :wechat2, :type => String, :default => ""
+    
+    #User activities 
+    field :firstAct, :type => String, :default => ""
+    field :recent_act, :type => String, :default => ""
+    
+    field :comments, :type => String, :default => ""
+    
     validates :name, :customer_id, :presence =>true
 end

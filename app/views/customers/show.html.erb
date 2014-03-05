@@ -21,11 +21,23 @@
  <br>
     Name: <%=@customer.name%><br>
 ID: <%=@customer.customer_id%><br>
+Gender: <%=@customer.sex%><br>
 Phone: <%=@customer.phone%><br>
 Address: <%=@customer.address%><br>
 WeChat ID: <%=@customer.wechat%><br>
-Project: <%=@customer.project%><br>
+Project: <%=@user_project.name%><br>
 Status: <%=@customer.status%><br>
+<p></p>
+Name2: <%=@customer.name1%><br>
+Name3: <%=@customer.name2%><br>
+WeChat ID2: <%=@customer.wechat1%><br>
+WeChat ID3: <%=@customer.wechat2%><br>
+
+<h3>User Activities</h3>
+First time met: <%=@customer.firstAct%><br>
+Current Activities: <%=@customer.recent_act%><br>
+
+Addtional Comments: <%=@customer.comments%><br>
 
  <br>
 <%= link_to 'Edit', edit_customer_path(@customer) %> |

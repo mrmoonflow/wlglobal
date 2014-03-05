@@ -3,8 +3,10 @@
 
 Project Name: <br>
 <%= f.text_field :name, :id => "name" %><br>
+Year:<br>
+<%= f.text_field :year, :id => "year" %><br>
 Project Location: <br>
-<%= f.select :location, [['NY','NY'],['FL','FL'],['NJ','NJ'],['CA','CA'],['WS','WS']] %>
+<%= f.select :location, options_for_select(us_states) %>
 <br>
 <br>
   <% if @project.errors.any? %>

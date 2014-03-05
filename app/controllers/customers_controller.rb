@@ -11,15 +11,19 @@ class CustomersController < ApplicationController
   # GET /customers/1
   # GET /customers/1.json
   def show
+      @user = Customer.find(params[:id])
+      @user_project = Project.find(@user.project)
   end
 
   # GET /customers/new
   def new
+    @projects = Project.all
     @customer = Customer.new
   end
 
   # GET /customers/1/edit
   def edit
+      @projects = Project.all
   end
 
   # POST /customers
@@ -75,6 +79,6 @@ class CustomersController < ApplicationController
     
     private
     def customer_params
-        params.require(:customer).permit(:name, :address, :customer_id, :phone, :company, :wechat, :sex, :status, :project)
+        params.require(:customer).permit(:name, :address, :customer_id, :phone, :company, :wechat, :sex, :status, :project, :name1,:name2,:wechat1,:wechat2, :firstAct,:comments, :recent_act)
     end
 end

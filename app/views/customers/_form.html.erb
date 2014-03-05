@@ -2,14 +2,28 @@
 
 Name: <%= f.text_field :name, :id => "name" %><br><br>
 ID: <%= f.text_field :customer_id, :id => "cid" %><br><br>
+Gender: 
+<%= f.select :sex, options_for_select([["Male", "Male"], ["Female", "Female"]]) %><br><br>
 Address: <%= f.text_field :address, :id => "address" %><br><br>
 Phone: <%= f.text_field :phone, :id => "phone" %><br><br>
 Compnay: <%= f.text_field :company, :id => "company" %><br><br>
 Wechat ID: <%= f.text_field :wechat, :id => "wechat" %><br><br>
 
-Project: <%= f.text_field :project, :id => "project" %><br><br>
+Project: <%= f.collection_select :project, @projects,  :id,:name %><br><br>
 Client Status: 
 <%= f.select :status, [['I-526 Application','I-526 Application'],['I-526 Approval','I-526 Approval'],['Interview','Interview'],['Conditional Green Card','Conditional Green Card'],['I-829 Application','I-829 Application'],['Permanent Green Card','Permanent Green Card'],['Potential Client','Potential Client']] %><br><br>
+
+Name2: <%= f.text_field :name1, :id => "name2" %><br><br>
+Name3: <%= f.text_field :name2, :id => "name3" %><br><br>
+Wechat ID 2: <%= f.text_field :wechat1, :id => "wechat1" %><br><br>
+Wechat ID 3: <%= f.text_field :wechat2, :id => "wechat2" %><br><br>
+
+<h3>User Activities</h3><br>
+Fist met time:
+<%= f.text_field :firstAct, :id => "firstact" %><br><br>
+Current Activities: <%= f.text_area :recent_act, :id => "recent_act" %><br><br>
+
+Additional Comments: <%= f.text_area :comments, :id => "comments" %><br><br>
   <% if @customer.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@customer.errors.count, "error") %> prohibited this customer from being saved:</h2>
