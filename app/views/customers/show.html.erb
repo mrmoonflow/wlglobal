@@ -19,19 +19,33 @@
 <span class="glyphicon glyphicon-plus-sign"></span>  
 <%= link_to 'Add New Customer', new_customer_path %>    <br>
  <br>
-    Name: <%=@customer.name%><br>
-ID: <%=@customer.customer_id%><br>
+    <b>Name:</b>    <%=@customer.name%><br>
+<b>ID:</b>  <%=@customer.customer_id%><br>
 Gender: <%=@customer.sex%><br>
-Phone: <%=@customer.phone%><br>
+US Phone: <%=@customer.us_phone%><br>
+Chinese Phone: <%=@customer.cn_phone%><br>
 Address: <%=@customer.address%><br>
 WeChat ID: <%=@customer.wechat%><br>
 Project: <%=@user_project.name%><br>
 Status: <%=@customer.status%><br>
 <p></p>
+
+<h3>Other family member</h3>
 Name2: <%=@customer.name1%><br>
-Name3: <%=@customer.name2%><br>
+US Phone: <%=@customer.us_phone1%><br>
+Chinese Phone: <%=@customer.cn_phone1%><br>
 WeChat ID2: <%=@customer.wechat1%><br>
+<br>
+Name3: <%=@customer.name2%><br>
+US Phone: <%=@customer.us_phone2%><br>
+Chinese Phone: <%=@customer.cn_phone2%><br>
 WeChat ID3: <%=@customer.wechat2%><br>
+<br>
+Name4: <%=@customer.name1%><br>
+US Phone: <%=@customer.us_phone3%><br>
+Chinese Phone: <%=@customer.cn_phone3%><br>
+WeChat ID4: <%=@customer.wechat3%><br>
+<br>
 
 <h3>User Activities</h3>
 First time met: <%=@customer.firstAct%><br>

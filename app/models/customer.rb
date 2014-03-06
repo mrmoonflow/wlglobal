@@ -2,7 +2,14 @@ class Customer
   include Mongoid::Document
     field :address, :type => String, :default => ""
     field :customer_id, :type => String, :default => ""
-    field :phone, :type => String, :default => ""
+    field :us_phone, :type => String, :default => ""
+    field :cn_phone, :type => String, :default => ""
+    field :us_phone1, :type => String, :default => ""
+    field :cn_phone1, :type => String, :default => ""
+    field :us_phone2, :type => String, :default => ""
+    field :cn_phone2, :type => String, :default => ""
+    field :us_phone3, :type => String, :default => ""
+    field :cn_phone3, :type => String, :default => ""
     field :company, :type => String, :default => ""
     field :wechat, :type => String, :default => ""
     field :name, :type => String, :default => ""
@@ -13,8 +20,10 @@ class Customer
     #Other people in the family
     field :name1, :type => String, :default => ""
     field :name2, :type => String, :default => ""
+    field :name3, :type => String, :default => ""
     field :wechat1, :type => String, :default => ""
     field :wechat2, :type => String, :default => ""
+    field :wechat3, :type => String, :default => ""
     
     #User activities 
     field :firstAct, :type => String, :default => ""

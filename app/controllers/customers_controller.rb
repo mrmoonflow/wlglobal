@@ -79,6 +79,6 @@ class CustomersController < ApplicationController
     
     private
     def customer_params
-        params.require(:customer).permit(:name, :address, :customer_id, :phone, :company, :wechat, :sex, :status, :project, :name1,:name2,:wechat1,:wechat2, :firstAct,:comments, :recent_act)
+        params.require(:customer).permit(:name, :address, :customer_id, :us_phone,:us_phone1,:us_phone2,:us_phone3,:cn_phone,:cn_phone1,:cn_phone2,:cn_phone3,   :company, :wechat, :sex, :status, :project, :name1,:name2,:wechat1,:wechat2,:wechat3, :firstAct,:comments, :recent_act)
     end
 end
