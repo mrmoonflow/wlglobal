@@ -5,6 +5,7 @@ class Customer
     
     field :us_phone, :type => String, :default => ""
     field :cn_phone, :type => String, :default => ""
+    field :email, :type => String, :default => ""
     
     field :company, :type => String, :default => ""
     field :wechat, :type => String, :default => ""
@@ -30,6 +31,9 @@ class Customer
     field :date_of_birth1, :type => String, :default => ""
     field :date_of_birth2, :type => String, :default => ""
     field :date_of_birth3, :type => String, :default => ""
+    field :email1, :type => String, :default => ""
+    field :email2, :type => String, :default => ""
+    field :email3, :type => String, :default => ""
     
     #User activities 
     field :firstAct, :type => String, :default => ""
