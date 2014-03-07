@@ -9,21 +9,24 @@ US_Phone: <%= f.text_field :us_phone %><br><br>
 Chinese_Phone: <%= f.text_field :cn_phone%><br><br>
 Compnay: <%= f.text_field :company, :id => "company" %><br><br>
 Wechat ID: <%= f.text_field :wechat, :id => "wechat" %><br><br>
-
+Date of birth: <%= f.text_field :date_of_birth, :id => "dob" %><br><br>
 Project: <%= f.collection_select :project, @projects,  :id,:name %><br><br>
 Client Status: 
 <%= f.select :status, [['I-526 Application','I-526 Application'],['I-526 Approval','I-526 Approval'],['Interview','Interview'],['Conditional Green Card','Conditional Green Card'],['I-829 Application','I-829 Application'],['Permanent Green Card','Permanent Green Card'],['Potential Client','Potential Client']] %><br><br>
 
 <h3>Other family member</h3>
 Name2: <%= f.text_field :name1, :id => "name2" %><br><br>
+Date of birth: <%= f.text_field :date_of_birth1, :id => "dob1" %><br><br>
 US_Phone: <%= f.text_field :us_phone1 %><br><br>
 Chinese_Phone: <%= f.text_field :cn_phone1%><br><br>
 Wechat ID 2: <%= f.text_field :wechat1, :id => "wechat1" %><br><br>
 Name3: <%= f.text_field :name2, :id => "name3" %><br><br>
+Date of birth: <%= f.text_field :date_of_birth2, :id => "dob2" %><br><br>
 US_Phone: <%= f.text_field :us_phone2%><br><br>
 Chinese_Phone: <%= f.text_field :cn_phone2%><br><br>
 Wechat ID 3: <%= f.text_field :wechat2, :id => "wechat2" %><br><br>
 Name4: <%= f.text_field :name3, :id => "name4" %><br><br>
+Date of birth: <%= f.text_field :date_of_birth3, :id => "dob3" %><br><br>
 US_Phone: <%= f.text_field :us_phone3%><br><br>
 Chinese_Phone: <%= f.text_field :cn_phone3%><br><br>
 Wechat ID 4: <%= f.text_field :wechat3, :id => "wechat2" %><br><br>
