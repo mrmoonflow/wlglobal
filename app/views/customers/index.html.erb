@@ -27,12 +27,12 @@
     <table class="table table-condensed">
   <thead>
     <tr>
-      <th>ID</th>
-        <th>Name</th>
-        <th>Status</th>
-        <th>Project</th>
-        <th>Wechat ID</th>
-        <th>Phone</th>
+      <th ><%=link_to "ID", {:controller => "customers", :action => "index", :ranking =>"id"}%></th>
+        <th><%=link_to "Name", {:controller => "customers", :action => "index", :ranking =>"name"}%></th>
+        <th><%=link_to "Status", {:controller => "customers", :action => "index", :ranking =>"status"}%></th>
+        <th><%=link_to "Project", {:controller => "customers", :action => "index", :ranking =>"project"}%></th>
+        <th><%=link_to "Wechat ID", {:controller => "customers", :action => "index", :ranking =>"wechat"}%></th>
+        <th><%=link_to "US Phone", {:controller => "customers", :action => "index", :ranking =>"phone"}%></th>
     </tr>
   </thead>
 
@@ -86,6 +86,7 @@ $('[data-toggle=collapse]').click(function(){
         });
         
         </script>
+       
 
 
 

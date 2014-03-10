@@ -4,9 +4,23 @@ class CustomersController < ApplicationController
 
   # GET /customers
   # GET /customers.json
-  def index
-      @customers = Customer.asc(:name) #rank customer by name
-  end
+    def index
+        if params[:ranking] == nil
+            @customers = Customer.asc(:name) #rank customer by name
+            elsif params[:ranking] == "id"
+            @customers = Customer.asc(:customer_id)
+            elsif params[:ranking] == "name"
+            @customers = Customer.asc(:name)
+            elsif params[:ranking] == "status"
+            @customers = Customer.asc(:status)
+            elsif params[:ranking] == "project"
+            @customers = Customer.asc(:project)
+            elsif params[:ranking] == "wechat"
+            @customers = Customer.asc(:wechat)
+            elsif params[:ranking] == "phone"
+            @customers = Customer.asc(:us_phone)
+        end
+        end
 
   # GET /customers/1
   # GET /customers/1.json
