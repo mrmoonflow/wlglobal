@@ -1,7 +1,10 @@
 <div class="container">
 <div class="row">
-	<div class="col-md-3">
+	<div class="col-md-5">
       <!-- Left column -->
+       <a ><strong><i class="glyphicon glyphicon-dashboard"></i> Customer Profile</strong></a> <br/>
+<span class="glyphicon glyphicon-plus-sign"></span>  
+<%= link_to 'Add New Customer', new_customer_path %>  
       <h3>User Information</h3>
         <b>Name:</b>    <%=@customer.name%><br>
 <b>ID:</b>  <%=@customer.customer_id%><br>
@@ -16,12 +19,10 @@ Project: <%=@user_project.name%><br>
 Status: <%=@customer.status%><br>
 <p></p>
   	</div><!-- /col-3 -->
-    <div class="col-md-9">
+    <div class="col-md-6">
       	
       <!-- column 2 -->	
-            <a ><strong><i class="glyphicon glyphicon-dashboard"></i> Customer Profile</strong></a> <br/>
-<span class="glyphicon glyphicon-plus-sign"></span>  
-<%= link_to 'Add New Customer', new_customer_path %>    <br>
+<br>
  <br>
   
 
