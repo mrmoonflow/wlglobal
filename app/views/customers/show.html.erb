@@ -2,24 +2,8 @@
 <div class="row">
 	<div class="col-md-3">
       <!-- Left column -->
-      <ul class="nav nav-stacked">
-            <li><%=link_to "My Homepage", user_path(current_user)%> </li>
-            <li><%=link_to "Project List", "/projects"%> </li>
-            <li><%=link_to "Customer List", "/customers"%> </li>
-            <li><%=link_to "Create New Project", "/projects/new"%> </li>
-            <li><%=link_to "Create New Customer", "/customers/new"%> </li>
-            <li><%=link_to "Edit my profile", edit_user_path(current_user)%> </li>
-            <li><%=link_to "Log out", destroy_user_session_path,:method => :delete %></li>
-      </ul>
-  	</div><!-- /col-3 -->
-    <div class="col-md-9">
-      	
-      <!-- column 2 -->	
-            <a ><strong><i class="glyphicon glyphicon-dashboard"></i> Customer Profile</strong></a> <br/>
-<span class="glyphicon glyphicon-plus-sign"></span>  
-<%= link_to 'Add New Customer', new_customer_path %>    <br>
- <br>
-    <b>Name:</b>    <%=@customer.name%><br>
+      <h3>User Information</h3>
+        <b>Name:</b>    <%=@customer.name%><br>
 <b>ID:</b>  <%=@customer.customer_id%><br>
 Date of birth: <%=@customer.date_of_birth%><br>
 Gender: <%=@customer.sex%><br>
@@ -31,8 +15,17 @@ Email: <%=@customer.email%><br>
 Project: <%=@user_project.name%><br>
 Status: <%=@customer.status%><br>
 <p></p>
+  	</div><!-- /col-3 -->
+    <div class="col-md-9">
+      	
+      <!-- column 2 -->	
+            <a ><strong><i class="glyphicon glyphicon-dashboard"></i> Customer Profile</strong></a> <br/>
+<span class="glyphicon glyphicon-plus-sign"></span>  
+<%= link_to 'Add New Customer', new_customer_path %>    <br>
+ <br>
+  
 
-<h3>Other family member</h3>
+<h4>Other family member</h4>
 Name2: <%=@customer.name1%><br>
 Date of birth: <%=@customer.date_of_birth1%><br>
 US Phone: <%=@customer.us_phone1%><br>
@@ -55,7 +48,7 @@ WeChat ID4: <%=@customer.wechat3%><br>
 Email: <%=@customer.email3%><br>
 <br>
 
-<h3>User Activities</h3>
+<h4>User Activities</h4>
 First time met: <%=@customer.firstAct%><br>
 Current Activities: <%=@customer.recent_act%><br>
 
