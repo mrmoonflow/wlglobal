@@ -1,0 +1,67 @@
+
+
+
+
+
+
+<div class="container">
+<div class="row">
+	<div class="col-md-3">
+      <!-- Left column -->
+      <ul class="nav nav-stacked">
+            <li><%=link_to "My Homepage", user_path(current_user)%> </li>
+            <li><%=link_to "Project List", "/projects"%> </li>
+            <li><%=link_to "Customer List", "/customers"%> </li>
+            <li><%=link_to "Create New Project", "/projects/new"%> </li>
+            <li><%=link_to "Create New Customer", "/customers/new"%> </li>
+            <li><%=link_to "Edit my profile", edit_user_path(current_user)%> </li>
+            <li><%=link_to "Log out", destroy_user_session_path,:method => :delete %></li>
+      </ul>
+  	</div><!-- /col-3 -->
+    <div class="col-md-9">
+      	
+      <!-- column 2 -->	
+            <a href="#"><strong><i class="glyphicon glyphicon-dashboard"></i> Editing Student Profile</strong></a> 
+    <hr>  
+<br>
+
+
+<%= render 'form' %>
+<%= link_to 'Show', @wstudent %> |
+<%= link_to 'Back', wstudents_path %>
+
+		<div class="row">
+           
+            
+          <br>
+
+</div>
+</div>
+<!-- /Main -->
+
+        
+        <script type='text/javascript' src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+
+        <script type='text/javascript' src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+
+
+
+        
+        <!-- JavaScript jQuery code from Bootply.com editor -->
+        
+        <script type='text/javascript'>
+        
+        $(document).ready(function() {
+        
+            $(".alert").addClass("in").fadeOut(4500);
+
+/* swap open/close side menu icons */
+$('[data-toggle=collapse]').click(function(){
+  	// toggle icon
+  	$(this).find("i").toggleClass("glyphicon-chevron-right glyphicon-chevron-down");
+});
+        
+        });
+        
+        </script>

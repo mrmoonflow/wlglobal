@@ -1,0 +1,17 @@
+class Wstudent
+  include Mongoid::Document
+    
+    field :email, :type => String, :default => ""
+    field :wechat, :type => String, :default => ""
+    field :name, :type => String, :default => ""
+    field :sex, :type => String, :default => ""
+    field :class_year, :type => String, :default => ""
+    field :dob, :type => String, :default => ""
+    field :us_phone, :type => String, :default => ""
+    field :cn_phone, :type => String, :default => ""
+    field :address, :type => String, :default => ""
+    field :student_id, :type => String, :default => ""
+    
+    
+     validates :name, :class_year, :presence =>true
+end

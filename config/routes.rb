@@ -1,4 +1,6 @@
 Wlglobal::Application.routes.draw do
+  resources :wstudents
+
   devise_for :users
   resources :projects
 
