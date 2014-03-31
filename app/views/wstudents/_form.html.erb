@@ -10,17 +10,46 @@
       </ul>
     </div>
   <% end %>
-Name: <%= f.text_field :name, :id => "name" %><br><br>
-ID: <%= f.text_field :student_id, :id => "cid" %><br><br>
-Gender: 
-<%= f.select :sex, options_for_select([["Male", "Male"], ["Female", "Female"]]) %><br><br>
-Class year: <%= f.text_field :class_year%><br><br>
-Address: <%= f.text_field :address, :id => "address" %><br><br>
-US_Phone: <%= f.text_field :us_phone %><br><br>
-Chinese_Phone: <%= f.text_field :cn_phone%><br><br>
-Wechat ID: <%= f.text_field :wechat, :id => "wechat" %><br><br>
-Email: <%= f.text_field :email, :id => "email" %><br><br>
-Date of birth: <%= f.text_field :dob, :id => "dob" %><br><br>
+  
+Class year: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <%= f.text_field :class_year%><br><br>
+ID: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <%= f.text_field :student_id, :id => "cid" %><br><br>
+Name *:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <%= f.text_field :name, :id => "name",:placeholder=>"Chinese name" %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<%= f.text_field :english_name, :id => "name",:placeholder=>"English name" %><br><br>
+
+Date of birth:&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <%= f.text_field :dob, :id => "dob" %>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<%= f.select :sex, options_for_select([["Male", "Male"], ["Female", "Female"]]) ,:prompt => "Gender"%><br><br>
+
+Current Address: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= f.text_field :address, :id => "address",:size=>"50" %><br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<%= f.text_field :zip, :id => "zip",:placeholder=>"Zipcode" %>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<%= f.text_field :city, :id => "city",:placeholder=>"City" %><br><br>
+
+Phone: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<%= f.text_field :cn_phone,:placeholder=>"Home"%>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<%= f.text_field :us_phone,:placeholder=>"Cell" %><br><br>
+Email: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= f.text_field :email, :id => "email",:placeholder=>"Personal" %>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<%= f.text_field :work_email, :id => "email",:placeholder=>"Work" %><br><br>
+
+Wechat ID:&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; <%= f.text_field :wechat, :id => "wechat" %><br><br>
+
+
+
+
+
+
 
   <div class="actions">
     <button id="singlebutton" name="singlebutton" class="btn btn-success">Submit</button>

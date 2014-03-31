@@ -1,15 +1,33 @@
 class Customer
   include Mongoid::Document
     field :address, :type => String, :default => ""
+    field :city, :type => String, :default => ""
+    field :zip, :type => String, :default => ""
+    
+    field :address_cncontent, :type => String, :default => ""
+    field :city_cncontent, :type => String, :default => ""
+    field :zip_cncontent, :type => String, :default => ""
+    
     field :customer_id, :type => String, :default => ""
     
     field :us_phone, :type => String, :default => ""
     field :cn_phone, :type => String, :default => ""
     field :email, :type => String, :default => ""
+    field :work_email, :type => String, :default => ""
+    
+    field :us_phone_cncontent, :type => String, :default => ""
+    field :cn_phone_cncontent, :type => String, :default => ""
+    field :email_cncontent, :type => String, :default => ""
+    field :work_email_cncontent, :type => String, :default => ""
+    field :wechat_cncontent, :type => String, :default => ""
     
     field :company, :type => String, :default => ""
+    field :city_employment, :type => String, :default => ""
+    field :zip_employment, :type => String, :default => ""
+    
     field :wechat, :type => String, :default => ""
     field :name, :type => String, :default => ""
+    field :english_name, :type => String, :default => ""
     field :sex, :type => String, :default => ""
     field :status, :type => String, :default => ""
     field :date_of_birth, :type => String, :default => ""

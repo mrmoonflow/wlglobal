@@ -28,11 +28,12 @@
 
   <thead>
     <tr>
+      <th>Class Year</th>
       <th>Student ID</th>
       <th>Name</th>
       <th>Email</th>
-      <th>Class Year</th>
       <th>WeChat</th>
+      <th>DOB</th>
       <th>US Phone</th>
       <th></th>
     </tr>
@@ -41,11 +42,12 @@
   <tbody>
     <% @wstudents.each do |wstudent| %>
       <tr>
+        <td><%=wstudent.class_year%></td>
         <td><%=wstudent.student_id%></td>
         <td><%=wstudent.name%></td>
         <td><%=wstudent.email%></td>
-        <td><%=wstudent.class_year%></td>
         <td><%=wstudent.wechat%></td>
+        <td><%=wstudent.dob%></td>
         <td><%=wstudent.us_phone%></td>
         <td><%= link_to 'Show', wstudent %> | 
         <%= link_to 'Edit', edit_wstudent_path(wstudent) %> | 

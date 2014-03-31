@@ -3,8 +3,10 @@
 	<div class="col-md-5">
       <!-- Left column -->
        <a ><strong><i class="glyphicon glyphicon-dashboard"></i> Customer Profile</strong></a> <br/>
+       <%=mail_to @user.email,"Send email to the customer"%><br>
 <span class="glyphicon glyphicon-plus-sign"></span>  
 <%= link_to 'Add New Customer', new_customer_path %>  
+
       <h3>User Information</h3>
         <b>Name:</b>    <%=@customer.name%><br>
 <b>ID:</b>  <%=@customer.customer_id%><br>
@@ -17,6 +19,7 @@ WeChat ID: <%=@customer.wechat%><br>
 Email: <%=@customer.email%><br>
 Project: <%=@user_project.name%><br>
 Status: <%=@customer.status%><br>
+
 <p></p>
   	</div><!-- /col-3 -->
     <div class="col-md-6">

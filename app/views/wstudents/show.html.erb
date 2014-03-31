@@ -18,7 +18,9 @@
       	
       <!-- column 2 -->	
             <a href="#"><strong><i class="glyphicon glyphicon-dashboard"></i> W Student Profile</strong></a> 
+            <div><%=mail_to @user.email,"Send email to the customer"%><div>
     <hr>  
+    
 <b>Student Name:</b>&nbsp;&nbsp;   <%=@user.name%><br><br>
 <b>Student email:</b>&nbsp;&nbsp;    <%=@user.email%><br><br>
 <b>Student id:</b>&nbsp;&nbsp;    <%=@user.student_id%><br><br>
@@ -40,9 +42,9 @@
 
 </div>
 </div>
+
 <!-- /Main -->
 
-        
         <script type='text/javascript' src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
 
