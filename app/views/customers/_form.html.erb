@@ -23,13 +23,13 @@ Date of birth:&nbsp;&nbsp;&nbsp;
 <%= f.select :sex, options_for_select([["Male", "Male"], ["Female", "Female"]]) ,:prompt => "Gender"%><br><br>
 
 
-<b>US Content:</b><br>
+<b>US Contact:</b><br>
 
 Current Address: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= f.text_field :address, :id => "address",:size=>"50" %><br><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<%= f.text_field :zip, :id => "zip",:placeholder=>"Zipcode" %>
+<%= f.text_field :zip, :id => "zip",:placeholder=>"Zip Code" %>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <%= f.text_field :city, :id => "city",:placeholder=>"City" %><br><br>
 
@@ -46,14 +46,14 @@ Email: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&
 Wechat ID:&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; <%= f.text_field :wechat, :id => "wechat" %><br><br>
 
-<b>Chinese Content:</b><br>
+<b>Chinese Contact:</b><br>
 
 
 Current Address: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= f.text_field :address_cncontent, :size=>"50" %><br><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<%= f.text_field :zip_cncontent,:placeholder=>"Zipcode" %>
+<%= f.text_field :zip_cncontent,:placeholder=>"Zip Code" %>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <%= f.text_field :city_cncontent,:placeholder=>"City" %><br><br>
 
