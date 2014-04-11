@@ -6,19 +6,7 @@
 
 <div class="container">
 <div class="row">
-	<div class="col-md-3">
-      <!-- Left column -->
-      <ul class="nav nav-stacked">
-            <li><%=link_to "My Homepage", user_path(current_user)%> </li>
-            <li><%=link_to "Project List", "/projects"%> </li>
-            <li><%=link_to "Customer List", "/customers"%> </li>
-            <li><%=link_to "Create New Project", "/projects/new"%> </li>
-            <li><%=link_to "Create New Customer", "/customers/new"%> </li>
-            <li><%=link_to "Edit my profile", edit_user_path(current_user)%> </li>
-            <li><%=link_to "Log out", destroy_user_session_path,:method => :delete %></li>
-      </ul>
-  	</div><!-- /col-3 -->
-    <div class="col-md-9">
+    <div class="col-md-30">
       	
       <!-- column 2 -->	
             <a ><strong><i class="glyphicon glyphicon-dashboard"></i> Customers</strong></a> <br/>
@@ -33,6 +21,9 @@
         <th><%=link_to "Project", {:controller => "customers", :action => "index", :ranking =>"project"}%></th>
         <th><%=link_to "Wechat ID", {:controller => "customers", :action => "index", :ranking =>"wechat"}%></th>
         <th><%=link_to "US Phone", {:controller => "customers", :action => "index", :ranking =>"phone"}%></th>
+        <th><%=link_to "CN Phone",{:controller => "customers", :action => "index", :ranking =>"cn_phone"}%></th>
+        <th><%=link_to "Personal Email",{:controller => "customers", :action => "index", :ranking =>"email"}%></th>
+        <th><%=link_to "Additional Comments",{:controller => "customers", :action => "index", :ranking =>"comments"}%></th>
     </tr>
   </thead>
 
@@ -45,6 +36,13 @@
         <td><%=Project.find(customer.project).name%></td>
         <td><%=customer.wechat%></td>
         <td><%=customer.us_phone%></td>
+        <td><%=customer.cn_phone%></td>
+        <td><%=customer.email%></td>
+        <%if customer.comments.length>15%>
+        <td><%=customer.comments[0..15]+"..."%></td>
+        <%else%>
+        <td><%=customer.comments%></td>
+        <%end%>
         <td><%= link_to 'Show', customer %> | <%= link_to 'Edit', edit_customer_path(customer) %> | <%= link_to 'Destroy', customer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>

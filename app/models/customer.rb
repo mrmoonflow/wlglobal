@@ -3,10 +3,12 @@ class Customer
     field :address, :type => String, :default => ""
     field :city, :type => String, :default => ""
     field :zip, :type => String, :default => ""
+    field :state_location, :type => String, :default => ""
     
     field :address_cncontent, :type => String, :default => ""
     field :city_cncontent, :type => String, :default => ""
     field :zip_cncontent, :type => String, :default => ""
+    field :state_location_cncontent, :type => String, :default => ""
     
     field :customer_id, :type => String, :default => ""
     
@@ -24,6 +26,7 @@ class Customer
     field :company, :type => String, :default => ""
     field :city_employment, :type => String, :default => ""
     field :zip_employment, :type => String, :default => ""
+    field :state_location_employ, :type => String, :default => ""
     
     field :wechat, :type => String, :default => ""
     field :name, :type => String, :default => ""

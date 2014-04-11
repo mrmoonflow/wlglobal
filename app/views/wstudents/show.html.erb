@@ -30,7 +30,16 @@
 <b>Student Wechat:</b>  &nbsp;&nbsp; <%=@user.wechat%><br><br>
 <b>Student US Phone:</b> &nbsp;&nbsp;  <%=@user.us_phone%><br><br>
 <b>Student CN Phone:</b> &nbsp;&nbsp; <%=@user.cn_phone%><br><br>
-<b>Student Address:</b> &nbsp;&nbsp; <%=@user.address%><br><br>
+<b>Student Address:</b> &nbsp;&nbsp; <%=@user.address%><br>
+<%if @user.city!=""%>
+<%=@user.city%>,&nbsp;
+<%end%>
+<%if @user.state!=""%>
+<%=@user.state%>,&nbsp;<%end%>
+<%if @user.zip!=""%>
+<%=@user.zip%>
+<%end%>
+<br>
 
 <br><%= link_to 'Edit', edit_wstudent_path(@wstudent) %> |
 <%= link_to 'Back', wstudents_path %>

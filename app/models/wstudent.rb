@@ -15,6 +15,7 @@ class Wstudent
     field :address, :type => String, :default => ""
     field :city, :type => String, :default => ""
     field :zip, :type => String, :default => ""
+    field :state, :type => String, :default => ""
     
     
     field :student_id, :type => String, :default => ""
