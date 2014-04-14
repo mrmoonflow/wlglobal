@@ -20,7 +20,7 @@ Name *:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <%= f.text_field :english_name, :id => "name",:placeholder=>"English name" %><br><br>
 
 Date of birth:&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <%= f.text_field :dob, :id => "dob" %>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <%= f.date_field :birthday %>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <%= f.select :sex, options_for_select([["Male", "Male"], ["Female", "Female"]]) ,:prompt => "Gender"%><br><br>
 
