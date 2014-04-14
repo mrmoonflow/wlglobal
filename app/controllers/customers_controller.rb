@@ -99,6 +99,6 @@ class CustomersController < ApplicationController
     
     private
     def customer_params
-        params.require(:customer).permit(:name, :address, :customer_id, :us_phone,:us_phone1,:us_phone2,:us_phone3,:cn_phone,:cn_phone1,:cn_phone2,:cn_phone3,   :company, :wechat, :sex, :status, :project, :name1,:name2,:wechat1,:wechat2,:wechat3, :firstAct,:comments, :recent_act,:date_of_birth,:date_of_birth1,:date_of_birth2,:date_of_birth3, :email,:email1,:email2,:email3, :work_email, :english_name,:zip,:city, :state_location,:state_location_cncontent,:state_location_employ)
+        params.require(:customer).permit(:name, :address, :customer_id, :us_phone,:us_phone1,:us_phone2,:us_phone3,:cn_phone,:cn_phone1,:cn_phone2,:cn_phone3,   :company, :wechat, :sex, :status, :project, :name1,:name2,:wechat1,:wechat2,:wechat3, :firstAct,:comments, :recent_act,:date_of_birth,:date_of_birth1,:date_of_birth2,:date_of_birth3, :email,:email1,:email2,:email3, :work_email, :english_name,:zip,:city, :state_location,:state_location_cncontent,:state_location_employ, :birthday)
     end
 end

@@ -4,6 +4,7 @@ class Customer
     field :city, :type => String, :default => ""
     field :zip, :type => String, :default => ""
     field :state_location, :type => String, :default => ""
+    field :birthday, :type=>Date
     
     field :address_cncontent, :type => String, :default => ""
     field :city_cncontent, :type => String, :default => ""
