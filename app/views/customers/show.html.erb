@@ -8,6 +8,7 @@
 <%= link_to 'Add New Customer', new_customer_path %>  
 
       <h3>User Information</h3>
+<h5>US Contact</h5>
         <b>Name:</b>    <%=@customer.name%><br>
 <b>ID:</b>  <%=@customer.customer_id%><br>
 Date of birth: <%=@customer.birthday%><br>
@@ -22,6 +23,30 @@ WeChat ID: <%=@customer.wechat%><br>
 Email: <%=@customer.email%><br>
 Project: <%=@user_project.name%><br>
 Status: <%=@customer.status%><br>
+<h5>Chinese Contact</h5>
+
+Current Address:<%= @customer.address_cncontent%>,
+<%=@customer.city_cncontent %>,
+<%= @customer.state_location_cncontent%>,
+<%=  @customer.zip_cncontent %><br>
+
+Phone:
+<%= @customer.cn_phone_cncontent%><br>
+<%= @customer.us_phone_cncontent %><br>
+Email: <br>
+Personal<%= @customer.email_cncontent %><br>
+Work: <%= @customer.work_email_cncontent %><br>
+
+Wechat ID:<%= @customer.wechat_cncontent %><br>
+
+
+
+Employment: <%= @customer.company %><br>
+<%=@customer.city_employment %>,
+<%= @customer.state_location_employ%>,
+<%= @customer.zip_employment%><br>
+
+
 
 <p></p>
   	</div><!-- /col-3 -->

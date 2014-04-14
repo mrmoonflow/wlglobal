@@ -58,7 +58,7 @@ Current Address: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= f.text_fiel
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <%= f.text_field :city_cncontent,:placeholder=>"City" %>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<%= f.select :state_location_cncontent, options_for_select(us_states) %>
+<%= f.select :state_location_cncontent, options_for_select(us_states) ,:prompt => "NA"%>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <%= f.text_field :zip_cncontent,:placeholder=>"Zip Code" %><br><br>
 
@@ -83,7 +83,7 @@ Employment: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <%= f.text_field :city_employment,:placeholder=>"City" %>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<%= f.select :state_location_employ, options_for_select(us_states) %>
+<%= f.select :state_location_employ, options_for_select(us_states),:prompt => "NA" %>
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <%= f.text_field :zip_employment,:placeholder=>"Zip code" %><br><br>
