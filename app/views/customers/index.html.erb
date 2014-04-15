@@ -36,7 +36,7 @@
         <td><%=Project.find(customer.project).name%></td>
         <td><%=customer.wechat%></td>
         <td><%=customer.us_phone%></td>
-        <td><%=customer.cn_phone%></td>
+        <td><%=customer.us_phone_cncontent%></td>
         <td><%=customer.email%></td>
         <%if customer.comments.length>30%>
         <td><%=customer.comments[0..30]+"..."%></td>
